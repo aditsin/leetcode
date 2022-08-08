@@ -45,6 +45,19 @@ public class LongestCommonPrefix {
 
         for(int i=1; i<str.length; i++) {
 
+            /**
+             * indexOf will return start index of the specified string if
+             * this string contain it as sub-string e.g.
+             * <p>
+             * String a = "bc";
+             * String b = "abcdefg";
+             * b.indexOf(a) => 1
+             * in case a = "";
+             * b.indexOf(a) => 0
+             * in case b doesn't contain 'a' as substring then it will return -1 e.g
+             * String a = xyz;
+             * b.indexOf(a) => -1
+              */
             while(str[i].indexOf(ans.toString()) != 0) {
                 ans.deleteCharAt(ans.length()-1);
             }
